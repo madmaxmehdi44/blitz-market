@@ -11,7 +11,7 @@ export function LinkMenusList() {
     // skip: ITEMS_PER_PAGE * page,
     // take: ITEMS_PER_PAGE,
   })
-  const catchLastId = linkMenus[0]?.id
+  const catchLastId = linkMenus[0]?.id || 1
   return (
     <div className="btn-group">
       {linkMenus.map((linkMenu) => {
@@ -28,7 +28,9 @@ export function LinkMenusList() {
             <Link key={linkMenu.id} href={`${linkMenu.urlLink}`}>
               <a
                 id={linkMenu.id.toString()}
-                onClick={(e) => {setSeletedLink(linkMenu.id)}}
+                onClick={(e) => {
+                  setSeletedLink(linkMenu.id)
+                }}
                 className={
                   linkMenu.id === seletedLink ? cssClass.concat(" glass text-purple-700") : cssClass
                 }

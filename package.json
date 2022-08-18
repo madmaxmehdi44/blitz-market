@@ -1,5 +1,5 @@
 {
-  "name": "projectmanagement",
+  "name": "blitzmarket",
   "version": "1.0.0",
   "scripts": {
     "dev": "blitz dev",
